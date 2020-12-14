@@ -1,0 +1,16 @@
+body{
+	background-color : rgb(30,30,30);
+}
+canvas{
+	margin-left : -50px;
+}
+#now{
+	color : white;
+}
+#target{
+	color : white;
+}
+#endGame{
+	color : white;
+	font-size : 36px;
+}
