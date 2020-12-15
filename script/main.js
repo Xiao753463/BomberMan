@@ -122,25 +122,26 @@ function draw() {
 
 	if(rightPressed) {
 		manX += 4;
-		if(rows[Math.floor((manY+manHeight)/50)][Math.floor((manX+manWidth)/50)] != "."||rows[Math.floor((manY-manHeight)/50+1)][Math.floor((manX+manWidth)/50)] != "."){
+		if(rows[Math.floor((manY+manHeight)/50)][Math.floor((manX+manWidth)/50)] != "."||rows[Math.floor((manY)/50)][Math.floor((manX+manWidth)/50)] != "."){
 			manX -= 4;
 		}
+		
 	}
 	else if(leftPressed) {
 		manX -= 4;
-		if(rows[Math.floor((manY+manHeight)/50)][Math.floor(manX/50)] != "."||rows[Math.floor((manY-manHeight)/50+1)][Math.floor(manX/50)] != "."){
+		if(rows[Math.floor(manY/50)][Math.floor(manX/50)] != "."||rows[Math.floor((manY+manHeight)/50)][Math.floor(manX/50)] != "."){
 			manX += 4;
 		}
 	}
 	if(downPressed) {
 		manY += 4;
-		if(rows[Math.floor((manY+manHeight)/50)][Math.floor((manX+manWidth)/50)] != "."||rows[Math.floor((manY+manHeight)/50)][Math.floor((manX-manWidth)/50+1)] != "."){
+		if(rows[Math.floor((manY+manHeight)/50)][Math.floor((manX+manWidth)/50)] != "."||rows[Math.floor((manY+manHeight)/50)][Math.floor(manX/50)] != "."){
 			manY -= 4;
 		}
 	}
 	else if(upPressed) {
 		manY -= 4;
-		if(rows[Math.floor(manY/50)][Math.floor((manX+manWidth)/50)] != "."||rows[Math.floor(manY/50)][Math.floor((manX-manWidth)/50+1)] != "."){
+		if(rows[Math.floor(manY/50)][Math.floor((manX+manWidth)/50)] != "."||rows[Math.floor(manY/50)][Math.floor(manX/50)] != "."){
 			manY += 4;
 		}
 	}
