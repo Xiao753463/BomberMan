@@ -128,6 +128,13 @@ function draw() {
 			}
 		}
 		
+		/*
+		if(rows[Math.floor((manY+manHeight/2)/50)][Math.floor((manX+manWidth/2)/50)] == bomb){
+			if(rows[Math.floor((manY+manHeight/2)/50)][Math.floor((manX+manWidth/2)/50)+1] != "."){
+				manX -= 4;
+			}
+		}
+		*/
 	}
 	else if(leftPressed) {
 		manX -= 4;
