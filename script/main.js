@@ -20,7 +20,7 @@ var mouseDown = false;
 
 var manHeight = 40;
 var manWidth = 40;
-var manX = 55;
+var manX = 155;
 var manY = 55;
 var bombX;
 var bombY;
@@ -122,27 +122,35 @@ function draw() {
 
 	if(rightPressed) {
 		manX += 4;
-		if(rows[Math.floor((manY+manHeight)/50)][Math.floor((manX+manWidth)/50)] != "."||rows[Math.floor((manY)/50)][Math.floor((manX+manWidth)/50)] != "."){
-			manX -= 4;
+		if(rows[Math.floor((manY+manHeight/2)/50)][Math.floor((manX+manWidth/2)/50)] == "."){
+			if(rows[Math.floor((manY+manHeight)/50)][Math.floor((manX+manWidth)/50)] != "."||rows[Math.floor((manY)/50)][Math.floor((manX+manWidth)/50)] != "."){
+				manX -= 4;
+			}
 		}
 		
 	}
 	else if(leftPressed) {
 		manX -= 4;
-		if(rows[Math.floor(manY/50)][Math.floor(manX/50)] != "."||rows[Math.floor((manY+manHeight)/50)][Math.floor(manX/50)] != "."){
-			manX += 4;
+		if(rows[Math.floor((manY+manHeight/2)/50)][Math.floor((manX+manWidth/2)/50)] == "."){
+			if(rows[Math.floor(manY/50)][Math.floor(manX/50)] != "."||rows[Math.floor((manY+manHeight)/50)][Math.floor(manX/50)] != "."){
+				manX += 4;
+			}
 		}
 	}
 	if(downPressed) {
 		manY += 4;
-		if(rows[Math.floor((manY+manHeight)/50)][Math.floor((manX+manWidth)/50)] != "."||rows[Math.floor((manY+manHeight)/50)][Math.floor(manX/50)] != "."){
-			manY -= 4;
+		if(rows[Math.floor((manY+manHeight/2)/50)][Math.floor((manX+manWidth/2)/50)] == "."){
+			if(rows[Math.floor((manY+manHeight)/50)][Math.floor((manX+manWidth)/50)] != "."||rows[Math.floor((manY+manHeight)/50)][Math.floor(manX/50)] != "."){
+				manY -= 4;
+			}
 		}
 	}
 	else if(upPressed) {
 		manY -= 4;
-		if(rows[Math.floor(manY/50)][Math.floor((manX+manWidth)/50)] != "."||rows[Math.floor(manY/50)][Math.floor(manX/50)] != "."){
-			manY += 4;
+		if(rows[Math.floor((manY+manHeight/2)/50)][Math.floor((manX+manWidth/2)/50)] == "."){
+			if(rows[Math.floor(manY/50)][Math.floor((manX+manWidth)/50)] != "."||rows[Math.floor(manY/50)][Math.floor(manX/50)] != "."){
+				manY += 4;
+			}
 		}
 	}
 	if(enterPressed && time == 0) {
